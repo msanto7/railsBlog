@@ -3,10 +3,15 @@ Rails.application.routes.draw do
 
 
   # root Route
-  root 'posts#index'
+  root 'posts#index', as: 'home'
 
   # Regular Routes
-  get 'about' => 'pages#about'
+  get 'about' => 'pages#about', as: 'about'
+
+
+
+  # Resource routes
+  resources :posts
 
 
 
